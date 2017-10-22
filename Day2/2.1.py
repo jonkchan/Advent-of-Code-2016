@@ -39,3 +39,5 @@ for line in key.split("\n"):
         lineCode += pad[yIndex][xIndex]
     masterCode += lineCode[-1]
 print(masterCode)
+
+# test comments
