@@ -72,7 +72,7 @@ key = '''  775  785  361
   801  797  341
    99  119  584
   175   40  994
-    8  234  831
+   08  234  831
   184  254  958
   625  999  945
   326  385  266
@@ -102,7 +102,7 @@ key = '''  775  785  361
   997  189  711
   830  300  983
   566  325  793
-    7  694  911
+   07  694  911
   574  490  138
   596  230  973
   855  377  552
@@ -1920,5 +1920,10 @@ key = [i[2:].split("  ") for i in key.split("\n")]
 counter = 0
 
 for triangle in key:
-    print(int(triangle[0]) + int(triangle[1]), int(triangle[0]) + int(triangle[2]), int(triangle[1]) + int(triangle[2]))
+    print(triangle)
+    if int(triangle[0]) + int(triangle[1]) > int(triangle[2]):
+        if int(triangle[0]) + int(triangle[2]) > int(triangle[1]):
+            if int(triangle[1]) + int(triangle[2]) > int(triangle[0]):
+                counter += 1
 
+print(counter)
