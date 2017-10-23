@@ -14,7 +14,7 @@ pad = ["123",
 lineCode = ""
 masterCode = ""
 
-# Starting Button is 5
+# Starting Button is #5
 yIndex, xIndex = 1, 1
 
 for line in key.split("\n"):
