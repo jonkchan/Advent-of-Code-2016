@@ -1917,18 +1917,18 @@ key = '''  775  785  361
 # New Key containing normalized Puzzle Key data
 newkey = []
 for line in key.split("\n"):
-    newkey.append([i for i in line.split("  ") if i != ""])
+    newkey.append([int(i) for i in line.split("  ") if i != ""])
 
 # Variable to hold count of possible triangles
 counter = 0
 
 for triangle in newkey:
     # Side A + Side B > Side C
-    if int(triangle[0]) + int(triangle[1]) > int(triangle[2]):
+    if triangle[0] + triangle[1] > triangle[2]:
         # Side A + Side C > Side B
-        if int(triangle[0]) + int(triangle[2]) > int(triangle[1]):
+        if triangle[0] + triangle[2] > triangle[1]:
             # Side B + Side C > Side A
-            if int(triangle[1]) + int(triangle[2]) > int(triangle[0]):
+            if triangle[1] + triangle[2] > triangle[0]:
                 counter += 1
 
 # Print total count of real Triangles in Puzzle Key
