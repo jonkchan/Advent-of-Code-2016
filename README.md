@@ -1,4 +1,7 @@
 # Advent-of-Code-2016
+
+<b>AoC URL: </b> https://adventofcode.com/2016
+
 Daily solutions are contained within respective folders.
 
 <table style="width:100%">
