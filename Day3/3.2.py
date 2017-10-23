@@ -1921,5 +1921,21 @@ for line in key.split("\n"):
         if i != "":
             newkey.append(int(i))
 
-# 775 622 297
-print(newkey[::3])
+# Variable to hold count of possible triangles
+counter = 0
+
+# Iterate through the 3 Columns from newkey variable.
+for i in range(0,3):
+    newkey1 = newkey[i::3]
+    for index, side in enumerate(newkey1):
+        if index % 3 == 0:
+            #Side A + Side B > Side C
+            if newkey1[index] + newkey1[index + 1] > newkey1[index + 2]:
+                #Side A + Side C > Side B
+                if newkey1[index] + newkey1[index + 2] > newkey1[index + 1]:
+                    #SideB + Side C > Side A
+                    if newkey1[index + 1] + newkey1[index + 2] > newkey1[index]:
+                        counter += 1
+
+# Print total count of real Triangles in Puzzle Key
+print(counter)
