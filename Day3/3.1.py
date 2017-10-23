@@ -1914,12 +1914,15 @@ key = '''  775  785  361
   696  302  809
   665  375  287'''
 
-key = [i[2:].split("  ") for i in key.split("\n")]
+# New Key containing normalized Puzzle Key data
+newkey = []
+for line in key.split("\n"):
+    newkey.append([i for i in line.split("  ") if i != ""])
 
 # Variable to hold count of possible triangles
 counter = 0
 
-for triangle in key:
+for triangle in newkey:
     print(triangle)
     if int(triangle[0]) + int(triangle[1]) > int(triangle[2]):
         if int(triangle[0]) + int(triangle[2]) > int(triangle[1]):
