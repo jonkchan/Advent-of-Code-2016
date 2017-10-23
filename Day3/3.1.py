@@ -1923,10 +1923,13 @@ for line in key.split("\n"):
 counter = 0
 
 for triangle in newkey:
-    print(triangle)
+    # Side A + Side B > Side C
     if int(triangle[0]) + int(triangle[1]) > int(triangle[2]):
+        # Side A + Side C > Side B
         if int(triangle[0]) + int(triangle[2]) > int(triangle[1]):
+            # Side B + Side C > Side A
             if int(triangle[1]) + int(triangle[2]) > int(triangle[0]):
                 counter += 1
 
+# Print total count of real Triangles in Puzzle Key
 print(counter)
