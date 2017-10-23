@@ -1924,7 +1924,7 @@ for line in key.split("\n"):
 # Variable to hold count of possible triangles
 counter = 0
 
-# Iterate through the 3 Columns from newkey variable.
+# Iterate through the 3 Columns from newkey variable
 for i in range(0,3):
     newkey1 = newkey[i::3]
     for index, side in enumerate(newkey1):
