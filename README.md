@@ -13,7 +13,7 @@ Daily solutions are contained within respective folders.
   <tr>
     <td>1</td>
     <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day1</td> 
-    <td>Incomplete</td>
+    <td>In Progress</td>
   </tr>
   <tr>
     <td>2</td>
@@ -43,7 +43,7 @@ Daily solutions are contained within respective folders.
   <tr>
     <td>7</td>
     <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day7</td> 
-    <td>N/A</td>
+    <td>In Progress</td>
   </tr>
   <tr>
     <td>8</td>
