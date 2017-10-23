@@ -1,2 +1,5 @@
 # Advent-of-Code-2016
-Daily solutions to Advent of Code 2016 are contained within respective folders.
+Daily solutions are contained within respective folders.
+
+<b>Day 1:</b>
+https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day1
