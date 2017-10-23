@@ -14,39 +14,37 @@ for i in key:
     if compass == "N":
         if i[0] == "L":
             compass = "W"
-            xIndex -= int(i[1])
+            xIndex -= int(i[1:])
         elif i[0] == "R":
             compass = "E"
-            xIndex += int(i[1])
+            xIndex += int(i[1:])
 
     # Direction: South
     elif compass == "S":
         if i[0] == "L":
             compass = "E"
-            xIndex += int(i[1])
+            xIndex += int(i[1:])
         elif i[0] == "R":
             compass = "W"
-            xIndex -= int(i[1])
+            xIndex -= int(i[1:])
 
     # Direction: West
     elif compass == "W":
         if i[0] == "L":
             compass = "S"
-            yIndex -= int(i[1])
+            yIndex -= int(i[1:])
         elif i[0] == "R":
             compass = "N"
-            yIndex += int(i[1])
+            yIndex += int(i[1:])
 
     # Direction: East
     elif compass == "E":
         if i[0] == "L":
             compass = "N"
-            yIndex += int(i[1])
+            yIndex += int(i[1:])
         elif i[0] == "R":
             compass = "S"
-            yIndex -= int(i[1])
-
-    print(xIndex, yIndex)
+            yIndex -= int(i[1:])
 
 # Print the absolute distance
-print(abs(xIndex + yIndex))
+print(abs(xIndex) + abs(yIndex))
