@@ -1,3 +1,6 @@
+from operator import itemgetter
+
+
 # Puzzle Input
 key = '''fubrjhqlf-edvnhw-dftxlvlwlrq-803[wjvzd]
 kzgwomvqk-rmttgjmiv-lmxizbumvb-902[zmnji]
@@ -946,3 +949,32 @@ lujbbrornm-vjpwncrl-kdwwh-ydalqjbrwp-615[lmjzy]
 kpvgtpcvkqpcn-dwppa-rwtejcukpi-336[pcktv]
 hwbba-gii-eqpvckpogpv-492[pbgiv]
 zsxyfgqj-hqfxxnknji-idj-xytwflj-359[jxfin]'''
+key = key.split("\n")
+
+# Variable List to contain Sector IDs
+sectorIDlist = []
+
+for room in key:
+
+    # Convert 3 digits to Integer and store as sectorID
+    sectorID = int(room[-10:-7])
+
+    # Store last 5 characters as checkSum
+    checkSum = room[-6:-1]
+
+    # Store string before checkSum as text
+    text = sorted(room[:len(room) - 10].replace("-", ""))
+
+    # Variable List to contain frequency of characters in text
+    freqContainer = []
+
+    for index, item in enumerate(text):
+        try:
+            if item != text[index + 1]:
+                freqContainer.append([item, text.count(item)])
+        except IndexError:
+            freqContainer.append([item, text.count(item)])
+
+    # Take top 5 frequently used letters
+    freqContainer = "".join([i[0] for i in sorted(freqContainer, key=itemgetter(1), reverse=True)[:5]])
+    print(freqContainer)
