@@ -1999,9 +1999,7 @@ sgjjqocmmcccpem[odeofpebaahroicm]pluzqzwkdzcovxic[zmyulzpuuiabvykn]ylxzlyooxnlib
 btrucplpxrokmcts[gytdxlzkfakenliallw]qhxznozsjsvhvnzhf
 nefefqadkmytguyp[ucqagcoyxinbrvbw]neksoxgtnnfojobtx[bxhdwvwfhybtbzkijj]poayieifsaocrboesfe[tnggfefcucifowqp]olmjwaqlaiwkkbtruw
 tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrwwbxbrkl[obfcyxbifipwhduubu]mjocivgvrcbrllso'''
-
-# Puzzle Input for testing
-key = '''abcd[bddb]xyyx\nabba[mnop]qrst'''
+key = '''abcd[bddb]xyyx[bddb]\nabba[mnop]qrst'''
 
 key = key.split("\n")
 
@@ -2021,13 +2019,19 @@ for line in key:
             sequence.append(text)
 
     # Loop through Hypernet List to find for potential ABBA
+    hypernetABBA = 0
     for text in hypernet:
-        for index, item in enumerate(text):
-            try:
-                if item not in ("[", "]") and item != text[index + 1]:
-                    if (item + text[index + 1]) == (text[index + 2] + text[index + 3])[::-1]:
-                        break
-                    else:
-                        # Complete Code
-            except IndexError:
-                pass
+        print(text)
+        for i in range(1, len(text)-4):
+            testABBA = text[i:4+i]
+            if testABBA[0] != testABBA[1]:
+                if testABBA[:2] == testABBA[2:][::-1]:
+                    hypernetABBA = 1
+                    break
+
+    # If ABBA was found in hypernet, IP does not support ABBA
+    if hypernetABBA != 1:
+        for text in sequence:
+            print(text)
+    else:
+        print("fail")
