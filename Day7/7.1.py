@@ -1999,8 +1999,9 @@ sgjjqocmmcccpem[odeofpebaahroicm]pluzqzwkdzcovxic[zmyulzpuuiabvykn]ylxzlyooxnlib
 btrucplpxrokmcts[gytdxlzkfakenliallw]qhxznozsjsvhvnzhf
 nefefqadkmytguyp[ucqagcoyxinbrvbw]neksoxgtnnfojobtx[bxhdwvwfhybtbzkijj]poayieifsaocrboesfe[tnggfefcucifowqp]olmjwaqlaiwkkbtruw
 tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrwwbxbrkl[obfcyxbifipwhduubu]mjocivgvrcbrllso'''
-key = '''abcd[bddb]xyyx
-abba[mnop]qrst'''
+
+# Puzzle Input for testing
+key = '''abcd[bddb]xyyx\nabba[mnop]qrst'''
 
 key = key.split("\n")
 
@@ -2025,6 +2026,8 @@ for line in key:
             try:
                 if item not in ("[", "]") and item != text[index + 1]:
                     if (item + text[index + 1]) == (text[index + 2] + text[index + 3])[::-1]:
-                        print("fail")
+                        break
+                    else:
+                        # Complete Code
             except IndexError:
                 pass
