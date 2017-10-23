@@ -1,0 +1,2 @@
+# Puzzle Input
+key = '''
