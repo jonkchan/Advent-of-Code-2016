@@ -1999,7 +1999,7 @@ sgjjqocmmcccpem[odeofpebaahroicm]pluzqzwkdzcovxic[zmyulzpuuiabvykn]ylxzlyooxnlib
 btrucplpxrokmcts[gytdxlzkfakenliallw]qhxznozsjsvhvnzhf
 nefefqadkmytguyp[ucqagcoyxinbrvbw]neksoxgtnnfojobtx[bxhdwvwfhybtbzkijj]poayieifsaocrboesfe[tnggfefcucifowqp]olmjwaqlaiwkkbtruw
 tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrwwbxbrkl[obfcyxbifipwhduubu]mjocivgvrcbrllso'''
-key = '''abcd[bddb]xyyx[bddb]\nabba[mnop]qrst'''
+# key = '''abcd[bddb]xyyx[bddb]\nabba[mnop]qrst'''
 
 key = key.split("\n")
 
@@ -2007,6 +2007,7 @@ key = key.split("\n")
 counter = 0
 
 for line in key:
+    print(line)
     hypernet = []
     sequence = []
     newline = line.replace("[", ",[").replace("]", "],").split(",")
@@ -2021,9 +2022,8 @@ for line in key:
     # Loop through Hypernet List to find for potential ABBA
     hypernetABBA = 0
     for text in hypernet:
-        print(text)
-        for i in range(1, len(text)-4):
-            testABBA = text[i:4+i]
+        for i in range(1, len(text) - 4):
+            testABBA = text[i:4 + i]
             if testABBA[0] != testABBA[1]:
                 if testABBA[:2] == testABBA[2:][::-1]:
                     hypernetABBA = 1
@@ -2032,6 +2032,15 @@ for line in key:
     # If ABBA was found in hypernet, IP does not support ABBA
     if hypernetABBA != 1:
         for text in sequence:
-            print(text)
+            for i in range(len(text)-3):
+                testABBA = text[i:4 + i]
+                if testABBA[0] != testABBA[1]:
+                    if testABBA[:2] == testABBA[2:][::-1]:
+                        counter += 1
+                        print("good")
+                        break
     else:
-        print("fail")
+        print("bad")
+
+
+print(counter)
