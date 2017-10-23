@@ -977,4 +977,8 @@ for room in key:
 
     # Take top 5 frequently used letters
     freqContainer = "".join([i[0] for i in sorted(freqContainer, key=itemgetter(1), reverse=True)[:5]])
-    print(freqContainer)
+
+    if freqContainer == checkSum:
+        sectorIDlist.append(sectorID)
+
+print(sum(sectorIDlist))
