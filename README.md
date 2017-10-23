@@ -1,6 +1,24 @@
 # Advent-of-Code-2016
 Daily solutions are contained within respective folders.
 
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+
 <b>Day 1:</b>	https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day1
 	
 <b>Day 2:</b>	https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day2
