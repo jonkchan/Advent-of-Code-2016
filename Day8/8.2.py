@@ -206,4 +206,5 @@ for command in key.split("\n"):
         elif "column" in command:
             rotatecol(a, b)
 
+# Display screen containing capital letters 
 print(''.join(screen))
