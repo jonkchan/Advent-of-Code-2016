@@ -40,7 +40,8 @@ for i in key:
                 yIndex += int(1)
             elif i[0] == "R":
                 yIndex -= int(1)
-
+                
+        # If coordinates are already in coordinates list, break. Else add coordinates to coordinates list.
         done = 0
         if [xIndex, yIndex] in coordinates:
             print(abs(xIndex) + abs(yIndex))
