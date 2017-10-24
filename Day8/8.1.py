@@ -162,9 +162,6 @@ rotate column x=8 by 1
 rotate column x=2 by 5
 rotate column x=1 by 5'''
 
-key = '''rect 3x2
-rotate column x=0 by 2'''
-
 # Screen is 50 width * 6 height
 width = 50
 height = 6
@@ -188,8 +185,10 @@ def rotaterow(a, b):
 # Rotate column x=A by B shifts all of the pixels in column A (0 is the left column) down by B pixels.
 # Pixels that would fall off the bottom appear at the top of the column.
 def rotatecol(a, b):
-    col = [screen[a + (i * 51): a + ((i * 51) + 1)] for i in range(height)]
+    col = [''.join(screen[a + (i * 51): a + ((i * 51) + 1)]) for i in range(height)]
+    print(col)
     for i in range(height):
+        screen[a + (i * 51)] = col[i - b]
 
 # ===================================================================================================
 
@@ -207,4 +206,5 @@ for command in key.split("\n"):
         elif "column" in command:
             rotatecol(a, b)
 
-print(''.join(screen))
+# print(''.join(screen))
+print(screen.count("#"))
