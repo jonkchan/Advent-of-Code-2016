@@ -1,4 +1,5 @@
-key = '''A(1x5)BC'''
+key = '''A(1x5)BC(3x3)XYZ'''
+
 output = ""
 timer = 0
 
@@ -12,6 +13,7 @@ for index, item in enumerate(key):
         else:
             length = int(key[index + 1])
             mult = int(key[index + 3])
-            output += key[index + 5 * length] * mult
+            output += key[index + 5: index + 5 +length] * mult
             timer = length + 4
-print(output)
+    print(output)
+print(len(output))
