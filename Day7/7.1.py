@@ -1999,27 +1999,24 @@ sgjjqocmmcccpem[odeofpebaahroicm]pluzqzwkdzcovxic[zmyulzpuuiabvykn]ylxzlyooxnlib
 btrucplpxrokmcts[gytdxlzkfakenliallw]qhxznozsjsvhvnzhf
 nefefqadkmytguyp[ucqagcoyxinbrvbw]neksoxgtnnfojobtx[bxhdwvwfhybtbzkijj]poayieifsaocrboesfe[tnggfefcucifowqp]olmjwaqlaiwkkbtruw
 tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrwwbxbrkl[obfcyxbifipwhduubu]mjocivgvrcbrllso'''
-# key = '''abcd[bddb]xyyx[bddb]\nabba[mnop]qrst'''
-
-key = key.split("\n")
 
 # Variable to hold count of IP supporting TLS
-counter = 0
+counter = []
 
-for line in key:
-    print(line)
+for line in key.split("\n")
+
+    # Variable list to contain hypernet and sequence
     hypernet = []
     sequence = []
-    newline = line.replace("[", ",[").replace("]", "],").split(",")
 
-    # Seperate Hypernet String and Sequence String
-    for text in newline:
+    # Separate hypernet and sequence
+    for text in line.replace("[", ",[").replace("]", "],").split(","):
         if '[' in text:
             hypernet.append(text)
         else:
             sequence.append(text)
 
-    # Loop through Hypernet List to find for potential ABBA
+    # First loop through hypernet list to search for ABBA. If ABBA exists, IP does not support TLS.
     hypernetABBA = 0
     for text in hypernet:
         for i in range(1, len(text) - 4):
@@ -2029,18 +2026,15 @@ for line in key:
                     hypernetABBA = 1
                     break
 
-    # If ABBA was found in hypernet, IP does not support ABBA
-    if hypernetABBA != 1:
+    # If ABBA was not found in hypernet, search for ABBA exist in sequence
+    if hypernetABBA == 0:
         for text in sequence:
             for i in range(len(text)-3):
                 testABBA = text[i:4 + i]
                 if testABBA[0] != testABBA[1]:
                     if testABBA[:2] == testABBA[2:][::-1]:
-                        counter += 1
-                        print("good")
+                        counter.append(line)
                         break
-    else:
-        print("bad")
 
-
-print(counter)
+counter = list(set(counter))
+print(len(counter))
