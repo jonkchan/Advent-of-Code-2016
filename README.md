@@ -8,7 +8,8 @@ Daily solutions are contained within respective folders.
   <tr>
     <th>Day #</th>
     <th>Folder URL</th> 
-    <th>Status</th>
+    <th>Part 1</th>
+    <th>Part 2</th>
   </tr>
   <tr>
     <td>1</td>
