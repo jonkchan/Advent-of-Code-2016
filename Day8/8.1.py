@@ -206,5 +206,4 @@ for command in key.split("\n"):
         elif "column" in command:
             rotatecol(a, b)
 
-# print(''.join(screen))
 print(screen.count("#"))
