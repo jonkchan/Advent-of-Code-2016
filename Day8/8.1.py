@@ -163,31 +163,33 @@ rotate column x=2 by 5
 rotate column x=1 by 5'''
 
 key = '''rect 3x2
-rotate row x=0 by 2'''
+rotate column x=0 by 2'''
 
-# Screen is 50 wide * 6 height
-screen = [i for i in (("." * 50) + "\n")*6]
+# Screen is 50 width * 6 height
+width = 50
+height = 6
+screen = [i for i in (("." * width) + "\n")*height]
 
 # ===================================================================================================
 
+# Rect AxB turns on all of the pixels in a rectangle at the top-left of the screen which is A wide and B tall.
 def rect(a, b):
-    # b is height aka rows
     for row in range(b):
-        # a is width aka columns
         for col in range(a):
             screen[col + (51 * row)] = "#"
 
+# Rotate row y=A by B shifts all of the pixels in row A (0 is the top row) right by B pixels.
+# Pixels that would fall off the right end appear at the left end of the row.
 def rotaterow(a, b):
-    # a = row (starts from 0)
-    # b = shift in row
-    row = screen[a * 51: (a * 51) + 50]
-    for i in range(0, 50):
+    row = screen[a * 51: (a * 51) + width]
+    for i in range(width):
         screen[(a * 51) + i] = row[i - b]
 
+# Rotate column x=A by B shifts all of the pixels in column A (0 is the left column) down by B pixels.
+# Pixels that would fall off the bottom appear at the top of the column.
 def rotatecol(a, b):
-    # a = column (starts from 0)
-    # b = shift in column
-    print('')
+    col = [screen[a + (i * 51): a + ((i * 51) + 1)] for i in range(height)]
+    for i in range(height):
 
 # ===================================================================================================
 
