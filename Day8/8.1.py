@@ -162,6 +162,9 @@ rotate column x=8 by 1
 rotate column x=2 by 5
 rotate column x=1 by 5'''
 
+key = '''rect 3x2
+rotate row x=0 by 2'''
+
 # Screen is 50 wide * 6 height
 screen = [i for i in (("." * 50) + "\n")*6]
 
@@ -174,15 +177,17 @@ def rect(a, b):
         for col in range(a):
             screen[col + (51 * row)] = "#"
 
-def rotatecol(a, b):
-    # a = column (starts from 0)
-    # b = shift
-    print('')
-
 def rotaterow(a, b):
     # a = row (starts from 0)
-    # b = shift
-    for index, item in enumerate(screen[a * 51)])
+    # b = shift in row
+    row = screen[a * 51: (a * 51) + 50]
+    for i in range(0, 50):
+        screen[(a * 51) + i] = row[i - b]
+
+def rotatecol(a, b):
+    # a = column (starts from 0)
+    # b = shift in column
+    print('')
 
 # ===================================================================================================
 
@@ -195,8 +200,9 @@ for command in key.split("\n"):
         a = int(command[command.index("=")+1:command.index(" b")])
         b = int(command[command.index("y ")+2:])
         if "row" in command:
-            rotatecol(a, b)
-        elif "column" in command:
+            print(command)
             rotaterow(a, b)
+        elif "column" in command:
+            rotatecol(a, b)
 
 print(''.join(screen))
