@@ -2003,7 +2003,7 @@ tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrww
 # Variable to hold count of IP supporting TLS
 counter = []
 
-for line in key.split("\n")
+for line in key.split("\n"):
 
     # Variable list to contain hypernet and sequence
     hypernet = []
