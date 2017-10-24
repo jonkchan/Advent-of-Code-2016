@@ -62,7 +62,7 @@ Daily solutions are contained within respective folders.
   <tr>
       <td>9</td>
       <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day9</td> 
-      <td>N/A</td>
+      <td>In Progress</td>
       <td>N/A</td>
   </tr>
   <tr>
