@@ -12,7 +12,7 @@ for index, item in enumerate(key):
         if item != "(":
             output += 1
         else:
-            # Marker = ( length x mult )
+            # Marker = (length x mult)
             length = int(key[index + 1: key.find("x", index)])
             mult = int(key[key.find("x", index) + 1: key.find(")", index)])
             output += len(key[key.find(")", index) + 1: key.find(")", index) + 1 + length] * mult)
