@@ -6,7 +6,7 @@ Daily solutions are contained within respective folders.
 
 <table style="width:100%">
   <tr>
-    <th>Day #</th>
+    <th>Day</th>
     <th>Folder URL</th> 
     <th>Part 1</th>
     <th>Part 2</th>
