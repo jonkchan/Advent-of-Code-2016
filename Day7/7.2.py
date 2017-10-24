@@ -2000,11 +2000,6 @@ btrucplpxrokmcts[gytdxlzkfakenliallw]qhxznozsjsvhvnzhf
 nefefqadkmytguyp[ucqagcoyxinbrvbw]neksoxgtnnfojobtx[bxhdwvwfhybtbzkijj]poayieifsaocrboesfe[tnggfefcucifowqp]olmjwaqlaiwkkbtruw
 tivudfusgnewzshs[mausfjbgxmyibin]yponuityptavbhekrlg[qeyafuevtlqemtfa]owtdxadrwwbxbrkl[obfcyxbifipwhduubu]mjocivgvrcbrllso'''
 
-key = '''aba[bab]xyz
-xyx[xyx]xyx
-aaa[kek]eke
-zazbz[bzb]cdb'''
-
 # Variable to hold count of IP supporting SSL
 counter = []
 
@@ -2014,16 +2009,26 @@ for line in key.split("\n"):
     hypernet = []
     sequence = []
 
-    # Separate hypernet and sequence
+    # Replace brackets with comma and bracket
     for text in line.replace("[", ",[").replace("]", "],").split(","):
+        # Delimit by comma and sort text into hypernet list and sequence list
         if '[' in text:
             hypernet.append(text)
         else:
             sequence.append(text)
 
     # First loop through sequence list to search for ABA.
-    # If ABBA exists in sequence, search hypernet for BAB.
+    # Then if ABA exists in sequence, search for BAB in hypernet.
     for item in sequence:
         for i in range(len(item) - 2):
+            # testSSL should be ABA
             testSSL = item[i:i + 3]
-            print(testSSL)
+            if testSSL[0] == testSSL[2] and testSSL[0] != testSSL[1]:
+                # hypernetSSL shuld be BAB
+                hypernetSSL = testSSL[1:] + testSSL[1]
+                for obj in hypernet:
+                    if hypernetSSL in obj:
+                        counter.append(line)
+
+counter = list(set(counter))
+print(len(counter))
