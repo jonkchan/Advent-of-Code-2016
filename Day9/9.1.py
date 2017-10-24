@@ -1,18 +1,17 @@
 key = '''A(1x5)BC'''
 output = ""
+timer = 0
 
 for index, item in enumerate(key):
-    switch = 0
-    if switch != 0:
-        pass
+    if timer > 0:
+        timer -= 1
     else:
+        print(timer, item)
         if item != "(":
             output += item
         else:
             length = int(key[index + 1])
             mult = int(key[index + 3])
-            print(length, mult)
             output += key[index + 5 * length] * mult
-            switch = length
-        switch -= 1
+            timer = length + 4
 print(output)
