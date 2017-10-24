@@ -57,7 +57,7 @@ Daily solutions are contained within respective folders.
       <td>8</td>
       <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day8</td> 
       <td>Completed</td>
-      <td>In Progress</td>
+      <td>Completed</td>
   </tr>
   <tr>
       <td>9</td>
