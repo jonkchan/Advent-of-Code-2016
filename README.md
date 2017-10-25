@@ -13,55 +13,55 @@ Daily solutions are contained within respective folders.
   </tr>
   <tr>
       <td>1</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day1</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day01</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>2</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day2</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day02</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>3</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day3</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day03</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>4</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day4</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day04</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>5</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day5</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day05</td>
       <td>N/A</td>
       <td>N/A</td>
   </tr>
   <tr>
       <td>6</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day6</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day06</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>7</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day7</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day07</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>8</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day8</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day08</td>
       <td>Completed</td>
       <td>Completed</td>
   </tr>
   <tr>
       <td>9</td>
-      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day9</td> 
+      <td>https://github.com/johnkchan/Advent-of-Code-2016/tree/master/Day09</td>
       <td>Completed</td>
       <td>In Progress</td>
   </tr>
